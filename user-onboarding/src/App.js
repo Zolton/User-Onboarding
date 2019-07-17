@@ -1,6 +1,6 @@
-import React from 'react';
-import './App.css';
-import FormikLoginForm from "./components/Form"
+import React from "react";
+import "./App.css";
+import FormikLoginForm from "./components/Form";
 
 function App() {
   return (
