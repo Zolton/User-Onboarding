@@ -12,7 +12,7 @@ function LoginForm({ values, errors, touched, isSubmitting }) {
         {touched.username && errors.username && <p>{errors.username}</p>}
         {touched.password && errors.password && <p>{errors.password}</p>}
       </div>
-      <Field name="name" type="name" placeholder="Enter username" />
+      <Field name="name" type="text" placeholder="Enter username" />
       <Field name="email" type="email" placeholder="Enter email" />
       <Field name="password" type="password" placeholder="Enter password" />
       <label>
@@ -33,9 +33,9 @@ const FormikLoginForm = withFormik({
     };
   },
 
-  validationScheme: Yup.object.shape({
+  validationScheme: Yup.object().shape({
     name: Yup.string()
-      .name("Name is not valid")
+      //.name("Name is not valid")
       .required("Name is required"),
     email: Yup.string()
       .email("Email not valid")
